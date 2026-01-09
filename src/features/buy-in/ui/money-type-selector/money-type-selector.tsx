@@ -6,6 +6,10 @@ import { RadioGroup } from '@/shared/ui';
 
 import { CASH_MONEY_BALANCE, type MoneyType, REAL_MONEY_BALANCE } from '../../model/constants';
 
+import cardIcon from '/icons/card.svg';
+import goldChipIcon from '/icons/gold-chip.svg';
+import redChipIcon from '/icons/red-chip.svg';
+
 interface MoneyTypeSelectorProps {
 	typeMoney: MoneyType;
 	amountValue: number;
@@ -27,14 +31,14 @@ export const MoneyTypeSelector = ({ typeMoney, onChange, amountValue }: MoneyTyp
 			<div className={css.infoSection}>
 				<div className={css.infoRow}>
 					<div className={css.infoTag}>
-						<img className={css.infoIcon} src="/icons/red-chip.svg" width={18} height={18} alt="red chip"/>
+						<img className={css.infoIcon} src={redChipIcon} width={18} height={18} alt="red chip"/>
 						<span className={css.infoLabel}>Game type:</span>
 					</div>
-					<span className={css.infoValue}>NL Hold’em  2/4</span>
+					<span className={css.infoValue}>NL Hold'em  2/4</span>
 				</div>
 				<div className={css.infoRow}>
 					<div className={css.infoTag}>
-						<img className={css.infoIcon} src="/icons/gold-chip.svg" width={18} height={18} alt="gold chip"/>
+						<img className={css.infoIcon} src={goldChipIcon} width={18} height={18} alt="gold chip"/>
 						<span className={css.infoLabel}>Available balance:</span>
 					</div>
 				</div>
@@ -60,7 +64,7 @@ export const MoneyTypeSelector = ({ typeMoney, onChange, amountValue }: MoneyTyp
 			<div className={css.infoSection}>
 				<div className={css.infoRow}>
 					<div className={css.infoTag}>
-						<img className={css.infoIcon} src="/icons/card.svg" width={18} height={18} alt="bank card"/>
+						<img className={css.infoIcon} src={cardIcon} width={18} height={18} alt="bank card"/>
 						<span className={css.infoLabel}>You will be charged:</span>
 					</div>
 					<span className={css.infoValue}>${amountValue}</span>

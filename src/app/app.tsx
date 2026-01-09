@@ -3,6 +3,8 @@ import css from './app.module.scss';
 import { AmountInput, MoneyTypeSelector, TablesCounter, useBuyIn } from '@/features/buy-in';
 import { Button } from '@/shared/ui';
 
+import crossIcon from '/icons/cross.svg';
+
 export const App = () => {
 	const {
 		moneyType,
@@ -25,7 +27,7 @@ export const App = () => {
 				<div className={css.header}>
 					<h2 className={css.title}>Buy-In</h2>
 					<button className={css.closeButton} onClick={handleCancel} aria-label="Close">
-						<img src="/icons/cross.svg" alt="Close" />
+						<img src={crossIcon} alt="Close" />
 					</button>
 				</div>
 

@@ -5,11 +5,12 @@ import { defineConfig } from 'vite';
 /**
  * https://vite.dev/config/
  * */
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+	base: command === 'serve' ? '/' : '/poker-test/',
 	plugins: [react()],
 	resolve: {
 		alias: {
 			'@': join(__dirname, './src'),
 		},
 	},
-});
+}));

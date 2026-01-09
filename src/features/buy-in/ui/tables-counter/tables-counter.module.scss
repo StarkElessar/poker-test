@@ -1,0 +1,19 @@
+.counterButton {
+	&:hover:not(:disabled) {
+		background: rgb(255 255 255 / 20%);
+	}
+
+	&:active:not(:disabled) {
+		background-color: rgb(255 255 255 / 10%);
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 40%;
+	}
+
+	svg {
+		height: 24px;
+		width: 24px;
+	}
+}

@@ -1,0 +1,69 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.separator {
+	background-color: rgba(#fff, 15%);
+	height: 1px;
+}
+
+.infoSection {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+	padding-inline: var(--spacing-sm);
+}
+
+.infoRow {
+	align-items: center;
+	display: grid;
+	font-size: var(--font-size-sm);
+	gap: var(--spacing-md);
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.infoTag {
+	align-items: center;
+	display: flex;
+	gap: var(--spacing-xs);
+}
+
+.infoIcon {
+	font-size: var(--font-size-md);
+}
+
+.infoLabel {
+	color: var(--color-text-secondary);
+}
+
+.infoValue {
+	color: var(--color-text-primary);
+	font-weight: var(--font-weight-medium);
+}
+
+.balances {
+	background-color: var(--color-background-alt);
+	border-radius: var(--radius-sm);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xs);
+	padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.balanceRow {
+	display: grid;
+	font-size: var(--font-size-sm);
+	gap: var(--spacing-md);
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.label {
+	color: var(--color-text-secondary);
+	opacity: 70%;
+}
+
+.valueActive {
+	color: var(--color-text-gold);
+}

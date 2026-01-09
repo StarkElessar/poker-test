@@ -1,0 +1,101 @@
+@font-face {
+	font-display: swap;
+	font-family: "Roboto Condensed";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/RobotoCondensed-Regular.woff2") format("woff2");
+}
+
+:root {
+	--color-primary: #18A748;
+	--color-primary-hover: #3a9240;
+	--color-primary-active: #1b5e20;
+	--color-primary-gradient-start: #3fa045;
+	--color-primary-gradient-end: #2e7d32;
+	--color-secondary: #5a6168;
+	--color-secondary-hover: #6a717a;
+	--color-secondary-active: #4a5158;
+	--color-secondary-gradient-start: #6d757d;
+	--color-secondary-gradient-end: #5a6168;
+	--color-text-primary: #fff;
+	--color-text-secondary: rgb(255 255 255 / 70%);
+	--color-text-gold: #ffca61;
+	--color-background: #1d1e22;
+	--color-background-alt: #232429;
+	--font-size-xs: 12px;
+	--font-size-sm: 14px;
+	--font-size-md: 16px;
+	--font-size-lg: 18px;
+	--line-height-tight: 1.2;
+	--line-height-normal: 1.5;
+	--line-height-relaxed: 1.75;
+	--spacing-2xs: 4px;
+	--spacing-xs: 8px;
+	--spacing-sm: 12px;
+	--spacing-md: 16px;
+	--spacing-lg: 24px;
+	--spacing-xl: 32px;
+	--spacing-2xl: 48px;
+	--radius-xs: 2px;
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-lg: 12px;
+	--radius-xl: 16px;
+	--shadow-sm: 0 1px 2px rgb(0 0 0 / 30%);
+	--shadow-md: 0 2px 4px rgb(0 0 0 / 30%);
+	--shadow-lg: 0 0 50px #{rgba(#000, 50%)};
+	--transition-fast: 0.15s ease-in-out;
+	--transition-normal: 0.3s ease-in-out;
+	--transition-slow: 0.5s ease-in-out;
+	--control-height-default: 40px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	overscroll-behavior-y: none;
+}
+
+body {
+	color: var(--color-text-primary);
+	font-family: "Roboto Condensed", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+	line-height: var(--line-height-normal);
+	min-height: 100vh;
+}
+
+button,
+hr {
+	border: none;
+}
+
+input,
+button {
+	font-family: inherit;
+	outline: none;
+}
+
+button {
+	background-color: transparent;
+
+	&:not(:disabled) {
+		cursor: pointer;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+#root {
+	min-height: 100vh;
+}

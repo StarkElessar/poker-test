@@ -1,0 +1,75 @@
+.overlay {
+	align-items: center;
+	background-color: rgb(0 0 0 / 70%);
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	padding: var(--spacing-lg);
+	position: fixed;
+}
+
+.modal {
+	background-color: var(--color-background);
+	border: 1px solid rgba(#fff, 15%);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-lg);
+	max-width: 400px;
+	padding: var(--spacing-lg);
+	position: relative;
+	width: 100%;
+
+	&::before {
+		background-image: url("/top-gradient.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: "";
+		height: 40px;
+		left: 50%;
+		opacity: 70%;
+		position: absolute;
+		top: 0;
+		transform: translateX(-50%);
+		width: 100%;
+	}
+}
+
+.header {
+	margin-block-end: var(--spacing-lg);
+}
+
+.title {
+	font-size: var(--font-size-lg);
+	margin-inline: auto;
+	text-align: center;
+}
+
+.closeButton {
+	aspect-ratio: 1;
+	display: grid;
+	opacity: 70%;
+	padding: var(--spacing-xs);
+	place-content: center;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	transition: opacity var(--transition-fast);
+	width: 32px;
+
+	&:hover {
+		opacity: 100%;
+	}
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-lg);
+	margin-block-end: var(--spacing-lg);
+}
+
+.footer {
+	display: flex;
+	gap: var(--spacing-md);
+	margin-block-start: 50px;
+	width: 100%;
+}

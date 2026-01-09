@@ -1,0 +1,135 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.label {
+	color: var(--color-text-secondary);
+	font-size: var(--font-size-sm);
+}
+
+.inputWrapper {
+	flex-grow: 1;
+	position: relative;
+
+	&::before {
+		content: "$";
+		font-size: var(--font-size-sm);
+		left: var(--spacing-sm);
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
+	}
+
+	.input {
+		padding-inline-start: 24px;
+	}
+}
+
+.buttons {
+	display: flex;
+	gap: var(--spacing-sm);
+}
+
+.sliderWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.slider {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color:  rgba(#fff, 15%);
+	cursor: pointer;
+	height: 6px;
+	outline: none;
+	position: relative;
+	width: 100%;
+
+	&,
+	&::before {
+		border-radius: 6px;
+	}
+
+	&::before {
+		background-color: var(--color-primary);
+		content: "";
+		display: block;
+		height: 100%;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: var(--slider-percentage, 0%);
+	}
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		background: var(--color-primary);
+		border: 2px solid var(--color-primary);
+		border-radius: 50%;
+		box-shadow: var(--shadow-md);
+		cursor: pointer;
+		height: 18px;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: transform var(--transition-fast);
+		width: 18px;
+
+		&:hover {
+			transform: translateY(-50%) scale(1.1);
+		}
+	}
+
+	&::-moz-range-thumb {
+		border: 2px solid var(--color-primary);
+		border-radius: 50%;
+		box-shadow: var(--shadow-md);
+		cursor: pointer;
+		height: 18px;
+		transition: transform var(--transition-fast);
+		width: 18px;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&::-ms-thumb {
+		background: var(--color-text-primary);
+		border: 2px solid var(--color-primary);
+		border-radius: 50%;
+		box-shadow: var(--shadow-md);
+		cursor: pointer;
+		height: 18px;
+		width: 18px;
+	}
+
+	&::-webkit-slider-runnable-track {
+		background: rgba(#fff, 15%);
+		border-radius: var(--radius-xs);
+		height: 6px;
+	}
+
+	&::-moz-range-track {
+		background: transparent;
+		border-radius: var(--radius-xs);
+		height: 6px;
+	}
+
+	&::-ms-track {
+		background: transparent;
+		border-color: transparent;
+		border-radius: var(--radius-xs);
+		color: transparent;
+		height: 6px;
+	}
+}

@@ -1,0 +1,44 @@
+.inputWrapper {
+	background-color: var(--color-background);
+	display: inline-flex;
+	height: var(--control-height-default);
+	width: 100%;
+}
+
+.withLabel {
+	position: relative;
+
+	&::before {
+		background-color: var(--color-background);
+		color: rgba(#fff, 50%);
+		content: attr(data-label);
+		font-size: var(--font-size-xs);
+		left: calc(var(--spacing-sm) - var(--spacing-2xs));
+		padding-inline: var(--spacing-2xs);
+		position: absolute;
+		transform: translateY(-50%);
+	}
+}
+
+.input {
+	background-color: transparent;
+	border: 1px solid rgba(#fff, 30%);
+	border-radius: var(--radius-sm);
+	color: var(--color-text-primary);
+	font-size: var(--font-size-sm);
+	height: 100%;
+	padding-inline: var(--spacing-sm);
+	width: 100%;
+}
+
+.number {
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&[type="number"] {
+		-moz-appearance: textfield;
+	}
+}

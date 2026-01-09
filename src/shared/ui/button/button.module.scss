@@ -1,49 +1,76 @@
 .button {
-	align-items: center;
+	position: relative;
 	border-radius: var(--radius-sm);
 	color: var(--color-text-primary);
 	display: inline-flex;
 	font-size: var(--font-size-md);
-	gap: var(--spacing-xs);
 	height: var(--control-height-default);
 	justify-content: center;
 	padding-inline: var(--spacing-sm);
-	transition: all var(--transition-fast);
+	transition: background-color var(--transition-fast);
 	width: max-content;
+	overflow: hidden;
+
+	span {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-xs);
+	}
 
 	&:disabled {
-		opacity: 50%;
+		opacity: 30%;
+	}
+
+	background-color: var(--color-bg);
+
+	&:not(:disabled):hover {
+		background-color: color-mix(
+				in srgb,
+				var(--color-bg),
+				#fff 25%
+		);
+	}
+
+	&:not(:disabled):active {
+		background-color: color-mix(
+				in srgb,
+				var(--color-bg),
+				#fff 5%
+		);
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+	}
+
+	&::before {
+		background-image: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0.1) 5%,
+				rgba(0, 0, 0, 0.4) 50%
+		);
+	}
+
+	&::after {
+		background-image: radial-gradient(
+				ellipse at top,
+				rgba(#fff, 15%) 5%,
+				rgba(#fff, 5%) 45%
+		);
 	}
 }
 
 .primary {
-	background: linear-gradient(180deg, var(--color-primary-gradient-start) 0%, var(--color-primary-gradient-end) 100%);
-	box-shadow: var(--shadow-md);
-
-	&:hover:not(:disabled) {
-		background: linear-gradient(180deg, #4db853 0%, var(--color-primary-hover) 100%);
-		box-shadow: 0 3px 6px rgb(0 0 0 / 40%);
-	}
-
-	&:active:not(:disabled) {
-		background: linear-gradient(180deg, var(--color-primary-active) 0%, #0f3a10 100%);
-		box-shadow: var(--shadow-sm);
-	}
+	--color-bg: var(--color-primary);
 }
 
 .secondary {
-	background: linear-gradient(180deg, var(--color-secondary-gradient-start) 0%, var(--color-secondary-gradient-end) 100%);
-	box-shadow: var(--shadow-md);
-
-	&:hover:not(:disabled) {
-		background: linear-gradient(180deg, #7d858d 0%, var(--color-secondary-hover) 100%);
-		box-shadow: 0 3px 6px rgb(0 0 0 / 40%);
-	}
-
-	&:active:not(:disabled) {
-		background: linear-gradient(180deg, var(--color-secondary-active) 0%, #3a4148 100%);
-		box-shadow: var(--shadow-sm);
-	}
+	--color-bg: var(--color-secondary);
 }
 
 .fullWidth {

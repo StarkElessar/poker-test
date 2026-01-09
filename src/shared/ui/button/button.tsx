@@ -26,7 +26,7 @@ export const Button = ({
 			className={cn(css.button, css[variant], fullWidth && css.fullWidth, className)}
 			{...props}
 		>
-			{children}
+			<span>{children}</span>
 		</button>
 	);
 };

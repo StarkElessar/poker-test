@@ -26,27 +26,17 @@
 	--font-size-sm: 14px;
 	--font-size-md: 16px;
 	--font-size-lg: 18px;
-	--line-height-tight: 1.2;
-	--line-height-normal: 1.5;
-	--line-height-relaxed: 1.75;
 	--spacing-2xs: 4px;
 	--spacing-xs: 8px;
 	--spacing-sm: 12px;
 	--spacing-md: 16px;
 	--spacing-lg: 24px;
-	--spacing-xl: 32px;
-	--spacing-2xl: 48px;
 	--radius-xs: 2px;
-	--radius-sm: 4px;
 	--radius-md: 8px;
-	--radius-lg: 12px;
-	--radius-xl: 16px;
 	--shadow-sm: 0 1px 2px rgb(0 0 0 / 30%);
 	--shadow-md: 0 2px 4px rgb(0 0 0 / 30%);
 	--shadow-lg: 0 0 50px #{rgba(#000, 50%)};
 	--transition-fast: 0.15s ease-in-out;
-	--transition-normal: 0.3s ease-in-out;
-	--transition-slow: 0.5s ease-in-out;
 	--control-height-default: 40px;
 }
 
@@ -69,7 +59,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-weight: 400;
-	line-height: var(--line-height-normal);
+	line-height: 1.5;
 	min-height: 100vh;
 }
 

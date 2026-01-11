@@ -14,8 +14,12 @@
 		content: attr(data-label);
 		font-size: var(--font-size-xs);
 		left: calc(var(--spacing-sm) - var(--spacing-2xs));
+		max-width: calc(100% - 20px);
+		overflow: hidden;
 		padding-inline: var(--spacing-2xs);
 		position: absolute;
+		text-overflow: ellipsis;
+		text-wrap: nowrap;
 		transform: translateY(-50%);
 	}
 }

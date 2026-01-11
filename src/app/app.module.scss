@@ -1,3 +1,5 @@
+@use "@/shared/styles/mixins" as *;
+
 .overlay {
 	align-items: center;
 	background-color: rgb(0 0 0 / 70%);
@@ -55,7 +57,7 @@
 	transition: opacity var(--transition-fast);
 	width: 32px;
 
-	&:hover {
+	@include any-hover {
 		opacity: 1;
 	}
 }

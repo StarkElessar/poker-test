@@ -9,7 +9,7 @@
 		"declaration-block-no-redundant-longhand-properties": true,
 		"property-no-vendor-prefix": null,
 		"no-descending-specificity": null,
-		"scss/load-partial-extension": "always"
+		"scss/load-partial-extension": "never"
 	}
 }
 

@@ -1,13 +1,20 @@
 @use "@/shared/styles/mixins" as *;
 
+.container,
+.sliderWrapper {
+	display: grid;
+}
+
 .container {
-	display: flex;
-	flex-direction: column;
 	gap: var(--spacing-md);
 }
 
 .label {
 	color: var(--color-text-secondary);
+}
+
+.label,
+.inputWrapper::before {
 	font-size: var(--font-size-sm);
 }
 
@@ -17,7 +24,6 @@
 
 	&::before {
 		content: "$";
-		font-size: var(--font-size-sm);
 		left: var(--spacing-sm);
 		pointer-events: none;
 		position: absolute;
@@ -36,20 +42,12 @@
 	gap: var(--spacing-sm);
 }
 
-.sliderWrapper {
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing-md);
-}
-
 .slider {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	background-color:  rgba(#fff, 15%);
-	cursor: pointer;
+	background-color: rgba(#fff, 15%);
 	height: 6px;
-	outline: none;
 	position: relative;
 	width: 100%;
 

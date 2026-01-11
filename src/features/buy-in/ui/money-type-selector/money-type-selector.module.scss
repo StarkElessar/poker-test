@@ -1,6 +1,15 @@
-.container {
-	display: flex;
-	flex-direction: column;
+.container,
+.infoSection,
+.infoRow,
+.balances,
+.balanceRow {
+	display: grid;
+}
+
+.container,
+.infoSection,
+.infoRow,
+.balanceRow {
 	gap: var(--spacing-md);
 }
 
@@ -10,17 +19,12 @@
 }
 
 .infoSection {
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing-md);
 	padding-inline: var(--spacing-sm);
 }
 
 .infoRow {
 	align-items: center;
-	display: grid;
 	font-size: var(--font-size-sm);
-	gap: var(--spacing-md);
 	grid-template-columns: repeat(2, 1fr);
 }
 
@@ -34,7 +38,8 @@
 	font-size: var(--font-size-md);
 }
 
-.infoLabel {
+.infoLabel,
+.label {
 	color: var(--color-text-secondary);
 }
 
@@ -46,21 +51,16 @@
 .balances {
 	background-color: var(--color-background-alt);
 	border-radius: var(--radius-sm);
-	display: flex;
-	flex-direction: column;
 	gap: var(--spacing-xs);
 	padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 .balanceRow {
-	display: grid;
 	font-size: var(--font-size-sm);
-	gap: var(--spacing-md);
 	grid-template-columns: repeat(2, 1fr);
 }
 
 .label {
-	color: var(--color-text-secondary);
 	opacity: 0.7;
 }
 

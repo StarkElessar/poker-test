@@ -1,6 +1,10 @@
+@use "@/shared/styles/mixins" as *;
+
 .counterButton {
-	&:hover:not(:disabled) {
-		background: rgb(255 255 255 / 20%);
+	&:not(:disabled) {
+		@include any-hover {
+			background: rgb(255 255 255 / 20%);
+		}
 	}
 
 	&:active:not(:disabled) {

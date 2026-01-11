@@ -23,47 +23,49 @@ export const App = () => {
 
 	return (
 		<div className={css.overlay}>
-			<div className={css.modal}>
-				<div className={css.header}>
-					<h2 className={css.title}>Buy-In</h2>
-					<button className={css.closeButton} onClick={handleCancel} aria-label="Close">
-						<img src={crossIcon} alt="Close" />
-					</button>
-				</div>
+			<div className={css.container}>
+				<div className={css.modal}>
+					<div className={css.header}>
+						<h2 className={css.title}>Buy-In</h2>
+						<button className={css.closeButton} onClick={handleCancel} aria-label="Close">
+							<img src={crossIcon} alt="Close" />
+						</button>
+					</div>
 
-				<div className={css.content}>
-					<MoneyTypeSelector
-						typeMoney={moneyType}
-						onChange={setMoneyType}
-						amountValue={amount}
-					/>
+					<div className={css.content}>
+						<MoneyTypeSelector
+							typeMoney={moneyType}
+							onChange={setMoneyType}
+							amountValue={amount}
+						/>
 
-					<AmountInput
-						value={amount}
-						onChange={setAmount}
-						onMin={setMin}
-						onMax={setMax}
-					/>
+						<AmountInput
+							value={amount}
+							onChange={setAmount}
+							onMin={setMin}
+							onMax={setMax}
+						/>
 
-					<Button variant="secondary" fullWidth>
-						Auto Buy-In and Auto Rebuy
-					</Button>
+						<Button variant="secondary" fullWidth>
+							Auto Buy-In and Auto Rebuy
+						</Button>
 
-					<TablesCounter
-						value={numberOfTables}
-						onIncrement={incrementTables}
-						onDecrement={decrementTables}
-						onChange={setTables}
-					/>
-				</div>
+						<TablesCounter
+							value={numberOfTables}
+							onIncrement={incrementTables}
+							onDecrement={decrementTables}
+							onChange={setTables}
+						/>
+					</div>
 
-				<div className={css.footer}>
-					<Button fullWidth variant="secondary" onClick={handleCancel}>
-						Cancel
-					</Button>
-					<Button fullWidth variant="primary" onClick={handleOk}>
-						Ok
-					</Button>
+					<div className={css.footer}>
+						<Button fullWidth variant="secondary" onClick={handleCancel}>
+							Cancel
+						</Button>
+						<Button fullWidth variant="primary" onClick={handleOk}>
+							Ok
+						</Button>
+					</div>
 				</div>
 			</div>
 		</div>
